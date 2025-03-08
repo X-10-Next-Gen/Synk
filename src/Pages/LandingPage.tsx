@@ -16,7 +16,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ isSignedIn }) => {
 
   // Button Styles
   const buttonStyles =
-    "group relative flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white transition-all duration-500 bg-black border-2 border-blue-900 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-900 hover:scale-105 hover:shadow-blue-500/50 hover:rotate-3";
+    "group relative flex items-center justify-center m-5 gap-2 px-6 py-3 text-lg font-semibold text-white transition-all duration-500 bg-black border-2 border-blue-900 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-900 hover:scale-105 hover:shadow-blue-500/50 hover:rotate-3";
 
   const signInButtons = (
     <>
@@ -29,11 +29,11 @@ const LandingPage: React.FC<LandingPageProps> = ({ isSignedIn }) => {
         <FaArrowRight className="transition-transform duration-500 ease-in-out group-hover:rotate-90" />
       </Link> <br />
       <Link to="/Dev/Dashboard" className={buttonStyles}>
-       Dev-DashBoard
+        Dev-DashBoard
         <FaArrowRight className="transition-transform duration-500 ease-in-out group-hover:rotate-90" />
       </Link>
       <Link to="/Buyer/Dashboard" className={buttonStyles}>
-       Buyer-DashBoard
+        Buyer-DashBoard
         <FaArrowRight className="transition-transform duration-500 ease-in-out group-hover:rotate-90" />
       </Link>
     </>
@@ -56,10 +56,10 @@ const LandingPage: React.FC<LandingPageProps> = ({ isSignedIn }) => {
     <div className="bg-black text-white min-h-screen">
       {/* Hero Section */}
       <section className="text-center py-20 bg-gradient-to-b from-black to-blue-800" data-aos="fade-up">
-        <h1 className="text-5xl font-extrabold mb-6">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
           {isSignedIn ? "Welcome Back, Developer!" : "Connecting AI Developers with AI Tool Seekers"}
         </h1>
-        <div className="flex justify-center gap-6 mt-6">
+        <div className="flex flex-col md:flex-row justify-center gap-6 mt-6">
           {isSignedIn ? loggedInButtons : signInButtons}
         </div>
       </section>
