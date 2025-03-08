@@ -1,4 +1,4 @@
-import Sidebar from "./Component/SideBar";
+import Sidebar from "./Component/Sidebar";
 import { ReactNode, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FiMenu } from "react-icons/fi"; // Import hamburger menu icon
